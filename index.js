@@ -13,7 +13,7 @@ app.get('/cafes', (_, res) => {
 
 app.get('/cafes/:id', (req, res) => {
   const { id } = req.params
-  const cafe = cafes.find(c => c.id === Number(id)) // Convierte id en un número
+  const cafe = cafes.find(c => c.id === Number(id))
   if (cafe) {
     res.status(200).send(cafe)
   } else {
